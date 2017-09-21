@@ -1,0 +1,76 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.layout{
+   background-color: yellow;
+   color: black;
+   font-size: 32;
+   font-family: sans-serif;
+   width:21%;
+   height: 110px;
+   margin: 50px;
+}
+
+.layout p {
+  padding:25px;
+  font-weight: 900;
+}
+
+.block {
+  background: white;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    font-size: 30px;
+    font-family: SANS-SERIF;
+    padding-top: 30px;
+    margin :50px;
+    display: inline-block;
+}
+
+.block button{
+   
+   color:black;
+   background-color: whitesmoke;
+   font-size: 17px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 20px;
+  
+}
