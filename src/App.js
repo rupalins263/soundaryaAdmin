@@ -84,7 +84,7 @@ class App extends Component {
 
    <div className="container" id="choose">
       {val}
-      <h1>Please Choose The School {log} </h1>
+      <h1>Please Choose The Instistution {log} </h1>
     
      <div className="row">
        <div  onClick={()=>{this._ChangeToLogin("SCHOOL")}} className=" col-sm-6 col-md-6 col-lg-6 layout">
@@ -97,6 +97,9 @@ class App extends Component {
         
          <div onClick={()=>{this._ChangeToLogin("PUC")}} className=" col-sm-6 col-md-6 col-lg-6 layout">
             <p>Soundarya PU College</p>
+        </div>
+          <div onClick={()=>{this._ChangeToLogin("SIMS")}} className=" col-sm-6 col-md-6 col-lg-6 layout">
+            <p>SIMS</p>
         </div>
        </div>
 

@@ -3,6 +3,7 @@ import './App.css';
 import SCHOOL from './SCHOOL';
 import PUC from './PUC';
 import CENTRAL from './CENTRAL';
+import SIMS from './SIMS';
 import _checkoutApi from './Api.js';
 
 class Login extends Component {
@@ -20,10 +21,13 @@ class Login extends Component {
    {
      if(this.props.site==="PUC")
      {
-       return <PUC/>
+       return <PUC _logout={this.props._logout} _ChangeToMain={this.props._ChangeToMain}/>
      }
      else if(this.props.site==="CENTRAL"){
-        return <CENTRAL/>
+        return <CENTRAL _logout={this.props._logout} _ChangeToMain={this.props._ChangeToMain}/>
+     }
+       else if(this.props.site==="SIMS"){
+        return <SIMS _logout={this.props._logout} _ChangeToMain={this.props._ChangeToMain}/>
      }
      else{
         return <SCHOOL _logout={this.props._logout} _ChangeToMain={this.props._ChangeToMain}/>
