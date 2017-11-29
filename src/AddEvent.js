@@ -11,7 +11,7 @@ class Album extends Component {
      constructor(){
        super();
        this.state={
-         
+         check:false,
          value:"Choose Album",
          imgUrl:""
 
@@ -46,7 +46,8 @@ class Album extends Component {
          data:formData
        }).then((res)=>{
            _this.setState({
-             imgUrl:res.data.url
+             imgUrl:res.data.url,
+             check:true
            })
        })
        .catch((err)=>{
@@ -56,7 +57,14 @@ class Album extends Component {
      })
    }
    _submit(event){
+     
      event.preventDefault();
+   
+     this.setState({
+      check:false
+    })
+    if(this.state.imgUrl.startsWith("http"))
+    {
      var title=document.getElementById("name").value;
      var date=document.getElementById("date").value;
      axios.post(URL,{
@@ -67,13 +75,20 @@ class Album extends Component {
          }).then((res)=>{
              alert("Uploaded")
              window.location("/")
+           
 
          }).catch((err)=>{
+        
 
             console.log(err)
          })
 
    }
+   else{
+  
+    alert("Retry submitting")
+   }
+  }
   render() {
   
 
@@ -96,7 +111,7 @@ class Album extends Component {
                 </div>
                 
                  <img src={this.state.imgUrl} width="300px" height="300px" id="Imageupload"/><br/><br/>
-                   <button type="submit" className="btn btn-success" >Submit</button>
+                   <button type="submit" className="btn btn-success disabled" >Submit</button>
                    <button type="reset"  className="btn btn-danger" style={{marginLeft:"30px"}} value="Reset">Reset</button>
                 </form>
       </div>

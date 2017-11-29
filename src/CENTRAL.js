@@ -16,9 +16,9 @@ class SCHOOL extends Component {
    <div className="App">
         <div className="container">
              <div className="header_nav">
-                <a href="/" title="Admin Home"><img  onClick={this.props._ChangeToMain} src="http://central.soundaryainstitutions.in/img/icons/home.png"/></a>
+                <a href="/" title="Admin Home"><img  onClick={this.props._ChangeToMain} src="http://res.cloudinary.com/dvl9i5pry/image/upload/v1507117723/home_hzetcd.png"/></a>
                
-                <a ><img  onClick={this.props._logout} title="Logout" src="http://central.soundaryainstitutions.in/img/icons/power.png"/></a>
+                <a ><img  onClick={this.props._logout} title="Logout" src="http://res.cloudinary.com/dvl9i5pry/image/upload/v1507117747/power_if9o0i.png"/></a>
            </div>
            <Switch>
 
