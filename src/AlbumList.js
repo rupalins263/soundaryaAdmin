@@ -103,7 +103,7 @@ class AlbumList extends Component {
                       <button className="btn btn-danger"style={{position:"absolute",top:"200px","left":"0",width:"100%"}} onClick={()=>{this.deleteImage(item.imageid)}}> DELETE </button>
           
                   </div> )
-     })
+     }).reverse();
     }
      
      let backbtn=""

@@ -70,25 +70,30 @@ class Album extends Component {
    }
 
     _submit(event){
+      document.getElementById("sub").disabled=true;
      event.preventDefault();
      var id=parseInt(document.getElementById("slct").value);
      var url=this.state.imgUrl;
-     console.log(id,url)
-     axios.post(PhotoURL,{
-       
-          "url":this.state.imgUrl,
-          "id" :id
-   
-         }).then((res)=>{
-
-            alert("Image Uploaded Successfully")
-          
-
-         }).catch((err)=>{
+     if(url.startsWith('http')){
+          axios.post(PhotoURL,{
             
-            alert("Failed to Upload")
-         })
+                  "url":this.state.imgUrl,
+                  "id" :id
+          
+                }).then((res)=>{
+                  
+                    alert("Image Uploaded Successfully")
+                    document.getElementById("sub").disabled=false;
 
+                }).catch((err)=>{
+                    
+                    alert("Failed to Upload")
+                    document.getElementById("sub").disabled=false;
+                })
+              }
+      else{
+        alert("Retry Submitting")
+      }
    }
 
   render() {
@@ -117,7 +122,7 @@ class Album extends Component {
                 </div>
                 
                  <img src={this.state.imgUrl} width="300px" height="300px" id="Imageupload"/><br/><br/>
-                   <button type="submit" className="btn btn-primary">Submit</button>
+                   <button type="submit" id="sub" className="btn btn-primary ">Submit</button>
                    <button type="reset" style={{marginLeft:"30px"}} className="btn btn-danger">Reset</button>
                 </form>
       </div>

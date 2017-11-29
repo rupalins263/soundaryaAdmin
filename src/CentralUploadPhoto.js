@@ -71,6 +71,7 @@ class Album extends Component {
 
     _submit(event){
      event.preventDefault();
+     document.getElementById("sub").disabled=true;
      var id=parseInt(document.getElementById("slct").value);
      var url=this.state.imgUrl;
      console.log(id,url)
@@ -81,12 +82,14 @@ class Album extends Component {
    
          }).then((res)=>{
 
-            alert("Image Uploaded Successfully")
+            alert("Image Uploaded Successfully");
+            document.getElementById("sub").disabled=false;
           
 
          }).catch((err)=>{
             
-            alert("Failed to Upload")
+            alert("Failed to Upload");
+            document.getElementById("sub").disabled=false;
          })
 
    }
@@ -117,7 +120,7 @@ class Album extends Component {
                 </div>
                 
                  <img src={this.state.imgUrl} width="300px" height="300px" id="Imageupload"/><br/><br/>
-                   <button type="submit" className="btn btn-primary">Submit</button>
+                   <button type="submit" id="sub" className="btn btn-primary">Submit</button>
                    <button type="reset" style={{marginLeft:"30px"}} className="btn btn-danger">Reset</button>
                 </form>
       </div>

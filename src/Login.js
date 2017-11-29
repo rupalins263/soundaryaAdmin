@@ -43,7 +43,7 @@ class Login extends Component {
               <div className="container">
 
                   <div className="header_nav">
-                  <a href="/" title="Admin Home"><img src="http://central.soundaryainstitutions.in/img/icons/home.png"/></a>
+                  <a href="/" title="Admin Home"><img src="http://res.cloudinary.com/dvl9i5pry/image/upload/v1507117723/home_hzetcd.png"/></a>
                
                </div>
 
@@ -67,3 +67,6 @@ class Login extends Component {
 }
 
 export default Login;
+
+//http://res.cloudinary.com/dvl9i5pry/image/upload/v1507117723/home_hzetcd.png
+//http://res.cloudinary.com/dvl9i5pry/image/upload/v1507117747/power_if9o0i.png
