@@ -34,7 +34,7 @@ class AlbumList extends Component {
 
    }
    deleteImage(ids){
-      axios.delete(`http://198.12.154.44:3333/Puc/Image/${ids}`)
+      axios.delete(`http://ec2-18-217-223-214.us-east-2.compute.amazonaws.com/Puc/Image/${ids}`)
           .then((res)=>{
                this.setState({
                       showImage:false

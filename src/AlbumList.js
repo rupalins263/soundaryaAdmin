@@ -16,7 +16,7 @@ class AlbumList extends Component {
          this.deleteImage=this.deleteImage.bind(this);
      }
     deleteImage(ids){
-      axios.delete(`http://198.12.154.44:3333/School/Image/${ids}`)
+      axios.delete(`http://ec2-18-217-223-214.us-east-2.compute.amazonaws.com/School/Image/${ids}`)
           .then((res)=>{
                this.setState({
                       showImage:false
